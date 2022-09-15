@@ -1,4 +1,10 @@
-const { src, dest, series, parallel, watch } = require("gulp");
+const {
+  src,
+  dest,
+  series,
+  parallel,
+  watch
+} = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const cssnano = require("gulp-cssnano");
 const autoprefixer = require("gulp-autoprefixer");
@@ -30,7 +36,9 @@ function sassCompiler(done) {
     .pipe(sass().on("error", sass.logError))
     .pipe(autoprefixer())
     .pipe(cssnano())
-    .pipe(rename({ suffix: `.min` }))
+    .pipe(rename({
+      suffix: `.min`
+    }))
     .pipe(sourcemaps.write())
     .pipe(dest(paths.sassDest));
   done();
@@ -45,7 +53,9 @@ function javaScript(done) {
       })
     )
     .pipe(uglify())
-    .pipe(rename({ suffix: `.min` }))
+    .pipe(rename({
+      suffix: `.min`
+    }))
     .pipe(sourcemaps.write())
     .pipe(dest(paths.jsDest));
   done();
@@ -76,7 +86,9 @@ function watchForChanges(done) {
 }
 
 function cleanStuff(done) {
-  src(paths.dist, { read: false }).pipe(clean());
+  src(paths.dist, {
+    read: false
+  }).pipe(clean());
   done();
 }
 
