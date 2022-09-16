@@ -127,6 +127,15 @@ body {
 // ==================
 
 @media(min-width:576px) {
+    .intro__text-heading {
+        & h1 {
+            font-size: 3.5rem;
+        }
+
+        & h2 {
+            font-size: 5.3rem;
+        }
+    }
 
     .ofert {
         &-heading {
@@ -148,6 +157,16 @@ body {
 
 
 @media(min-width:768px) {
+    .intro__text-heading {
+        & h1 {
+            font-size: 4rem;
+        }
+
+        & h2 {
+            font-size: 5.8rem;
+        }
+    }
+
     .ofert {
         &-heading {
             &--title {
@@ -170,6 +189,16 @@ body {
 }
 
 @media(min-width:992px) {
+    .intro__text-heading {
+        & h1 {
+            font-size: 5rem;
+        }
+
+        & h2 {
+            font-size: 6.3rem;
+        }
+    }
+
     .ofert {
         &-heading {
             &--title {
@@ -209,24 +238,4 @@ body {
         background-image: url('../../dist/img/intro-bg-desktop.jpg');
     }
 
-    .ofert {
-        &-heading {
-            &--title {
-                font-size: 5rem;
-            }
-
-            &--description {
-                font-size: 3rem;
-            }
-        }
-
-        &__box {
-            flex-direction: row;
-
-            &-text {
-                width: 50%;
-                font-size: 1.8rem;
-            }
-        }
-    }
 }
