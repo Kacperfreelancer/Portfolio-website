@@ -28,7 +28,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    background-image: url('../../dist/img/intro-bg1.jpg');
+    background-image: url('../../dist/img/intro-bg-medium.jpg');
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -103,7 +103,12 @@ body {
             & img {
                 max-width: 100%;
                 border-radius: 10px;
+                object-fit: cover;
                 box-shadow: 0 0 30px $black-shadow;
+            }
+
+            &-desktop {
+                display: none;
             }
         }
 
@@ -165,6 +170,45 @@ body {
 }
 
 @media(min-width:992px) {
+    .ofert {
+        &-heading {
+            &--title {
+                font-size: 5rem;
+            }
+
+            &--description {
+                font-size: 3rem;
+            }
+        }
+
+        &__box {
+            flex-direction: row;
+
+            &-img {
+                width: 50%;
+
+                &-mobile {
+                    display: none;
+                }
+
+                &-desktop {
+                    display: block;
+                }
+            }
+
+            &-text {
+                width: 50%;
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+@media(min-width:1200px) {
+    .intro {
+        background-image: url('../../dist/img/intro-bg-desktop.jpg');
+    }
+
     .ofert {
         &-heading {
             &--title {
