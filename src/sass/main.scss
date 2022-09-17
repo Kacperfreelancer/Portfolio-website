@@ -57,14 +57,18 @@ body {
             }
 
             & h2 {
-                font-size: 5rem;
                 z-index: 1;
-                color: $main-blue;
 
-                & span {
+                & .special-mark {
                     color: $pure-white;
                     font-size: 3rem;
-                    vertical-align: 10px;
+                    vertical-align: 5px;
+                }
+
+                & .write-script {
+                    color: $main-blue;
+                    font-size: 5rem;
+
                 }
             }
         }
@@ -239,3 +243,7 @@ body {
     }
 
 }
+
+
+// ============
+// Key Frames
