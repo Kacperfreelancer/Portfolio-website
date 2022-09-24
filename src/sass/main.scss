@@ -17,6 +17,10 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
+img {
+    max-width: 100%;
+}
+
 
 .wrapper {
     max-width: 1240px;
@@ -106,13 +110,6 @@ body {
 
             & img {
                 max-width: 100%;
-                border-radius: 10px;
-                object-fit: cover;
-                box-shadow: 0 0 30px $black-shadow;
-            }
-
-            &-desktop {
-                display: none;
             }
         }
 
@@ -122,6 +119,27 @@ body {
             font-size: 1.6rem;
             font-weight: 300;
             text-align: left;
+        }
+    }
+}
+
+.contact {
+    margin: 2em 0;
+
+    &__box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+
+        &-form {
+
+            &-box {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
         }
     }
 }
@@ -183,14 +201,49 @@ body {
         }
 
         &__box {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            &-img {
+                width: 50%;
+
+                & img {
+                    width: 80%;
+                }
+            }
 
             &-text {
-                width: 70%;
+                width: 50%;
                 font-size: 1.8rem;
             }
         }
     }
+
+    .contact {
+        &__box {
+            flex-direction: row;
+
+            &-img {
+                width: 50%;
+                order: 1;
+            }
+
+            &-form {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &-box {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
+
+
 
 @media(min-width:992px) {
     .intro__text-heading {
@@ -215,7 +268,6 @@ body {
         }
 
         &__box {
-            flex-direction: row;
 
             &-img {
                 width: 50%;
@@ -243,6 +295,14 @@ body {
     }
 
 }
+
+@media(min-width:1500px) {
+    .intro {
+        background-image: url('../../dist/img/intro-bg-large.jpg');
+    }
+
+}
+
 
 
 // ============
