@@ -46,3 +46,43 @@ const typeMachine = () => {
 }
 
 typeMachine()
+
+// Menu animation
+
+const icon = document.querySelector('.burger-icon')
+const menu = [...document.querySelectorAll('.menu')]
+const allNavItems = [...document.querySelectorAll(".nav-animation")]
+
+const handleAniamtion = () => {
+  menu.forEach(item => {
+    item.classList.toggle('active')
+  })
+
+  handleNavItemsAnimation()
+}
+
+const handleNavItemsAnimation = () => {
+  let delayTime = 0;
+
+  allNavItems.forEach((item) => {
+    item.classList.toggle("nav-items-animation");
+    item.style.animationDelay = `.${delayTime}s`;
+    delayTime++;
+    item.addEventListener('click', handleAniamtion)
+  });
+};
+
+const handleIconColor = () => {
+  const headerHeight = document.querySelector('.intro').scrollHeight;
+  console.log(headerHeight)
+  console.log(window.scrollY)
+
+  if (window.scrollY > headerHeight - 50) {
+    icon.classList.add('black')
+  } else {
+    icon.classList.remove('black')
+  }
+}
+
+icon.addEventListener('click', handleAniamtion);
+window.addEventListener('scroll', handleIconColor)

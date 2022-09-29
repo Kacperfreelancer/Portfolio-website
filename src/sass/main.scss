@@ -27,12 +27,114 @@ img {
     margin: 0 auto;
 }
 
+.burger-icon {
+    box-sizing: content-box;
+    top: 25px;
+    right: 25px;
+    position: fixed;
+    width: 50px;
+    padding: 1em;
+    z-index: 999;
+    cursor: pointer;
+
+    &:before,
+    &:after,
+    & div {
+        background-color: $pure-white;
+        content: "";
+        display: block;
+        height: 6px;
+        border-radius: 3px;
+        margin: 7px 0;
+        transition: 0.5s;
+    }
+
+    &.black::after {
+        background-color: #000;
+    }
+
+    &.black::before {
+        background-color: #000;
+    }
+
+    &.black div {
+        background-color: #000;
+    }
+
+
+    &.active:before {
+        transform: translateY(12px) rotate(135deg);
+    }
+
+    &.active:after {
+        transform: translateY(-12px) rotate(-135deg);
+    }
+
+    &.active div {
+        transform: scale(0);
+    }
+}
+
+.nav-mobile {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: $background-gradient;
+    z-index: 998;
+    text-align: center;
+    transform: translateX(100%);
+    transition: transform 1s;
+
+    &__menu {
+        list-style: none;
+        padding: 2em;
+
+        &>li {
+            margin: 1em 0;
+            padding: 1em;
+        }
+
+        &-item {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            color: $pure-white;
+            font-size: 3rem;
+            padding: 1em;
+        }
+    }
+
+    &.active {
+        transform: translateX(0);
+    }
+}
+
+@keyframes navItemsAnimation {
+    from {
+        transform: translateX(200%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.nav-items-animation {
+    animation: navItemsAnimation 1s both;
+}
+
 .intro {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    background-image: url('../../dist/img/intro-bg-medium.jpg');
+    background-image: url('../../dist/img/nasa-Q1p7bh3SHj8-unsplash\ \(1\).jpg');
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -53,7 +155,7 @@ img {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: $pure-white;
+            // color: $pure-white;
 
             & h1 {
                 font-size: 3rem;
@@ -289,19 +391,19 @@ img {
     }
 }
 
-@media(min-width:1200px) {
-    .intro {
-        background-image: url('../../dist/img/intro-bg-desktop.jpg');
-    }
+// @media(min-width:1200px) {
+//     .intro {
+//         background-image: url('../../dist/img/intro-bg-desktop.jpg');
+//     }
 
-}
+// }
 
-@media(min-width:1500px) {
-    .intro {
-        background-image: url('../../dist/img/intro-bg-large.jpg');
-    }
+// @media(min-width:1500px) {
+//     .intro {
+//         background-image: url('../../dist/img/intro-bg-large.jpg');
+//     }
 
-}
+// }
 
 
 
