@@ -74,8 +74,6 @@ const handleNavItemsAnimation = () => {
 
 const handleIconColor = () => {
   const headerHeight = document.querySelector('.intro').scrollHeight;
-  console.log(headerHeight)
-  console.log(window.scrollY)
 
   if (window.scrollY > headerHeight - 50) {
     icon.classList.add('black')

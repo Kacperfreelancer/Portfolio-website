@@ -49,17 +49,12 @@ img {
         transition: 0.5s;
     }
 
-    &.black::after {
-        background-color: #000;
-    }
-
-    &.black::before {
-        background-color: #000;
-    }
-
+    &.black::after,
+    &.black::before,
     &.black div {
         background-color: #000;
     }
+
 
 
     &.active:before {
@@ -128,13 +123,46 @@ img {
     animation: navItemsAnimation 1s both;
 }
 
+.nav-desktop {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 2em;
+    z-index: 1;
+    display: none;
+
+    &__menu {
+        display: flex;
+        list-style: none;
+        margin-right: 6em;
+
+        &-item {
+            text-decoration: none;
+            color: $pure-white;
+            text-transform: uppercase;
+            font-size: 2rem;
+            padding: .5em 2em;
+            margin: 0 .5em;
+            border-radius: 25px;
+            transition: background-color .3s;
+
+            &:hover {
+                background-color: $main-blue;
+            }
+        }
+    }
+}
+
 .intro {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    background-image: url('../../dist/img/nasa-Q1p7bh3SHj8-unsplash\ \(1\).jpg');
+    background-image: url('../../dist/img/nasa-Q1p7bh3SHj8-unsplash.jpg');
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -155,7 +183,7 @@ img {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            // color: $pure-white;
+            color: $pure-white;
 
             & h1 {
                 font-size: 3rem;
@@ -281,6 +309,7 @@ img {
 
 
 @media(min-width:768px) {
+
     .intro__text-heading {
         & h1 {
             font-size: 4rem;
@@ -348,6 +377,15 @@ img {
 
 
 @media(min-width:992px) {
+    .nav-desktop {
+        display: flex;
+    }
+
+    .nav-mobile,
+    .burger-icon {
+        display: none;
+    }
+
     .intro__text-heading {
         & h1 {
             font-size: 5rem;
@@ -391,20 +429,12 @@ img {
     }
 }
 
-// @media(min-width:1200px) {
-//     .intro {
-//         background-image: url('../../dist/img/intro-bg-desktop.jpg');
-//     }
+@media(min-width:1200px) {
+    .intro {
+        background-image: url('../../dist/img/bg-desktop.jpg');
+    }
 
-// }
-
-// @media(min-width:1500px) {
-//     .intro {
-//         background-image: url('../../dist/img/intro-bg-large.jpg');
-//     }
-
-// }
-
+}
 
 
 // ============
