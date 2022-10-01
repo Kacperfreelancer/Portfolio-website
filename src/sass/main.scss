@@ -274,6 +274,46 @@ img {
     }
 }
 
+.about {
+    padding: 1em;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em;
+
+        &-text {
+            margin-top: 2em;
+            font-weight: 300;
+        }
+
+        &-img {
+            padding: 1em;
+        }
+    }
+}
+
+.footer {
+    padding: 2em;
+    background-color: $grey-bg;
+    color: $pure-white;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+
+        &-heading {
+            text-align: center;
+
+            & h3 {
+                margin-top: 1em;
+            }
+        }
+    }
+}
+
 // ==================
 //     MEDIA 
 // ==================
@@ -369,6 +409,27 @@ img {
                 &-box {
                     width: 100%;
                 }
+            }
+        }
+    }
+
+    .about {
+        &__box {
+            flex-direction: row;
+
+            &-img {
+                width: 50%;
+
+                & img {
+                    width: 80%;
+                }
+            }
+
+            &-text {
+                width: 50%;
+                font-size: 1.8rem;
+                padding: 1em;
+                margin: 0;
             }
         }
     }
