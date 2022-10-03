@@ -57,7 +57,6 @@ const handleAniamtion = () => {
   menu.forEach(item => {
     item.classList.toggle('active')
   })
-
   handleNavItemsAnimation()
 }
 
@@ -84,3 +83,14 @@ const handleIconColor = () => {
 
 icon.addEventListener('click', handleAniamtion);
 window.addEventListener('scroll', handleIconColor)
+
+
+// DATA 
+
+const handleData = () => {
+  const span = document.querySelector('.data')
+  const data = new Date().getFullYear()
+  span.textContent = data
+}
+
+handleData()

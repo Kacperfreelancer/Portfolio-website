@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;700&family=Ubuntu:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/636a3696cc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="dist/css/main.min.css">
 </head>
 
@@ -49,17 +50,17 @@
 
     <div class="ofert">
         <div class="wrapper">
-            <div class="ofert-heading">
+            <div class="ofert-heading" data-aos="fade-up">
                 <h2 class="ofert-heading--title section-heading">Strefa Klienta</h2>
                 <h3 class="ofert-heading--description">Strona internetowa - Jedyna, której <span
                         class="main-color">potrzebujesz!</span>
                 </h3>
             </div>
             <div class="ofert__box">
-                <div class="ofert__box-img">
+                <div class="ofert__box-img" data-aos="fade-right">
                     <img src="./dist/img/ofert-section.png" class='ofert__box-img' alt="Moje zdjęcie">
                 </div>
-                <div class="ofert__box-text">
+                <div class="ofert__box-text" data-aos="fade-left">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, repellat aliquid
                         obcaecati ullam aut illo illum hic mollitia? Dolore molestias deserunt dolores officia? Maxime
                         magnam praesentium voluptatum vero ipsam obcaecati.</p><br>
@@ -74,12 +75,12 @@
 
     <div class="contact">
         <div class="wrapper">
-            <h2 class="section-heading">Napisz do mnie!</h2>
+            <h2 class="section-heading" data-aos="fade-up">Napisz do mnie!</h2>
             <div class="contact__box">
-                <div class="contact__box-img">
+                <div class="contact__box-img" data-aos="fade-left">
                     <img src="./dist/img/form-img.png" alt="Męzczyzna wysyłający maila">
                 </div>
-                <div class="contact__box-form">
+                <div class="contact__box-form" data-aos="fade-right">
                     <form action="" class="contact__box-form-box">
                         <input type="text" placeholder="Imie" class="common-input">
                         <input type="mail" placeholder="E-mail" class="common-input">
@@ -93,12 +94,12 @@
     </div>
     <div class="about">
         <div class="wrapper">
-            <h2 class="section-heading">O mnie</h2>
+            <h2 class="section-heading" data-aos="fade-up">O mnie</h2>
             <div class="about__box">
-                <div class="about__box-img">
+                <div class="about__box-img" data-aos="fade-right">
                     <img src="./dist/img/about-img.png" alt="Grafika pracującego programisty">
                 </div>
-                <div class="about__box-text">
+                <div class="about__box-text" data-aos="fade-left">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptate exercitationem sed
                         dolores sint quis beatae consequuntur dolor sequi sit?</p>
                     <br>
@@ -117,7 +118,6 @@
             <div class="footer__box">
                 <div class="footer__box-heading">
                     <h2>Kacper Kaczmarek | Twórca stron internetowych!</h2>
-                    <h3>Tutaj mnie znajdziesz!</h3>
                 </div>
                 <div class="footer__box-socials">
                     <a href="https://www.instagram.com/kacperwebdeveloper/"><i class="fa-brands fa-instagram"></i></a>
@@ -128,8 +128,16 @@
                     <a href="https://storyset.com/work">Work illustrations by Storyset</a>
                 </div>
             </div>
+            <div class="footer__box-copy">
+                &copy; Kacper Kaczmarek <span class="data"></span>
+            </div>
         </div>
     </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="./dist/js/script.min.js"></script>
 </body>
 

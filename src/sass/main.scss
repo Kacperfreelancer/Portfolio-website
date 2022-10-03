@@ -25,6 +25,7 @@ img {
 .wrapper {
     max-width: 1240px;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 .burger-icon {
@@ -297,6 +298,7 @@ img {
 
 .footer {
     padding: 2em;
+    text-align: center;
     background-color: $grey-bg;
     color: $pure-white;
 
@@ -305,11 +307,7 @@ img {
         flex-direction: column;
 
         &-heading {
-            text-align: center;
-
-            & h3 {
-                margin-top: 1em;
-            }
+            margin-bottom: 2em;
         }
     }
 }
@@ -496,7 +494,3 @@ img {
     }
 
 }
-
-
-// ============
-// Key Frames

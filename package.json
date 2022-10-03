@@ -28,5 +28,8 @@
         "gulp-uglify": "^3.0.2",
         "postcss": "^8.4.14",
         "sass": "^1.52.3"
+    },
+    "dependencies": {
+        "aos": "^2.3.4"
     }
 }
